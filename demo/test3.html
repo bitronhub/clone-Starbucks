@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel Fix</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .carousel-btn-sm {
+        display: none !important;
+      }
+      .carousel-btn-lg {
+        display: inline-flex !important;
+      }
+    }
+
+    /* Default visibility */
+    .carousel-btn-sm {
+      display: flex;
+    }
+    .carousel-btn-lg {
+      display: none;
+    }
+
+    @media (min-width: 992px) {
+      .carousel-btn-sm {
+        display: none !important;
+      }
+      .carousel-btn-lg {
+        display: inline-flex !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="custom-gap">
+  <div class="container my-5">
+    <h4 class="mb-4">Curated for you</h4>
+    <div class="d-flex align-items-center justify-content-between position-relative px-5">
+
+      <!-- Large screen button -->
+      <button class="btn btn-light rounded-circle carousel-btn-lg position-absolute start-0 top-50 translate-middle-y z-1" onclick="moveCarousel(-1)">
+        ❮
+      </button>
+
+      <!-- Small screen buttons -->
+      <div class="position-absolute top-0 end-0 mt-2 me-2 d-flex gap-2 z-3 carousel-btn-sm">
+        <button class="btn btn-light rounded-circle" onclick="moveCarousel(-1)">❮</button>
+        <button class="btn btn-light rounded-circle" onclick="moveCarousel(1)">❯</button>
+      </div>
+
+      <!-- Carousel track (simplified) -->
+      <div class="overflow-hidden w-100">
+        <div class="d-flex" style="width: 100%;">
+          <div class="col-12 col-lg-4 p-2 flex-shrink-0">
+            <div class="card">
+              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card 1">
+              <div class="card-body">Welcome In ☕</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

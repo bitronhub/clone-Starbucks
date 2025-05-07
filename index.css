@@ -1,0 +1,142 @@
+/* Apply to the whole page */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    /* or use a similar clean font */
+    font-weight: 600;
+    /* bold text */
+    text-transform: uppercase;
+    /* all caps */
+    letter-spacing: 1px;
+    /* space between letters */
+    color: #000 !important;
+    /* make links black */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #006241 !important;
+    /* Starbucks green on hover */
+}
+
+/* Add space inside the first hero block */
+.main-content {
+    padding-top: 70px;
+}
+
+/* On screens 768px or smaller, remove that space */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 0;
+    }
+}
+
+.custom-gap {
+    margin-top: 1.5rem;
+    /* Like mb-4 */
+}
+
+@media (min-width: 768px) {
+    .custom-gap {
+        margin-top: 3rem;
+        /* Like mb-5 */
+    }
+}
+
+.btn-resp {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .btn-resp {
+        width: auto;
+        padding: 0.5rem 1.5rem;
+        /* same as px-4 py-2 */
+    }
+}
+
+.carousel-nav-sm {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .carousel-nav-sm {
+        display: flex !important;
+    }
+
+    .carousel-btn-lg {
+        display: none !important;
+    }
+}
+
+/* Make the button full width only on small devices */
+.responsive-btn {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .responsive-btn {
+        width: auto;
+    }
+}
+
+.container {
+    min-height: 300px;
+    /* Adjust as needed */
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    font-display: swap;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.75); /* Increase opacity for better visibility */
+}
+
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.main-content {
+    padding-top: 70px;
+}
+
+.carousel-nav-sm,
+.carousel-btn-lg {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+@media (max-width: 991.98px) {
+    .carousel-nav-sm {
+        visibility: visible;
+    }
+
+    .carousel-btn-lg {
+        visibility: hidden;
+    }
+}
+
+.container {
+    min-height: 300px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        min-height: 350px;
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            min-height: 400px;
+        }
+    }
+}
